@@ -1,11 +1,12 @@
 '''
+addToArticleDB.py
+created by Austin Poor
 
-Site Scraper:
-    init:   (source_name, start_url, right_score, allowed_domain=None, base_url=None, cycle_limit=3)
-    scrape: (json_filename=None, tsv_filename=None, db_filename=None)
+Uses the SiteScraper class to scrape news article websites and add them
+to the 'db/articles.db' sqlite database.
 
-
-source list format :
+The left and right sources are specified as lists of dictionaries with
+the following formatting:
     {
         'source_name':'',
         'start_url':'',
@@ -20,7 +21,7 @@ import multiprocessing as mp
 
 from SiteScraper import SiteScraper
 
-db_path = 'articles.db'
+db_path = 'db/articles.db'
 
 left_sources = [
     {
@@ -172,6 +173,10 @@ right_sources = [
 
 
 def scrape_wrapper(kwargs, output):
+    """Uses SiteScraper() with supplied kwargs and puts the
+    results in the supplied output.
+    Also, if an error occurs, scrape_wrapper() print it to the console
+    instead of stopping the program."""
     try:
         scraper = SiteScraper(**kwargs)
         scraper.scrape(db_filename=db_path)
@@ -187,13 +192,14 @@ def scrape_wrapper(kwargs, output):
 
 
 def run_scrape():
-    p_size = 3
-
+    """Runs the webscrape on the left_sources and right_sources
+    and adds the results to the sqlite articles database.
+    Prints the scrape's progress as it goes."""
     random.shuffle(left_sources)
     random.shuffle(right_sources)
     left_articles_added = 0
 
-    for i in range(0, len(left_sources), p_size):
+    for i in range(0, len(left_sources), 3):
         s1, s2, s3 = left_sources[i:i+3]
         output = mp.Queue()
         processes = [
@@ -207,7 +213,7 @@ def run_scrape():
             p.join()
         left_articles_added += sum([output.get() for p in processes])
 
-    for i in range(0, len(right_sources), p_size):
+    for i in range(0, len(right_sources), 3):
         s1, s2, s3 = right_sources[i:i+3]
         output = mp.Queue()
         processes = [
