@@ -48,6 +48,12 @@ It was able to achieve fairly good accuracy after about 5 epochs as you can see 
 
 ### Article Sources
 
+Chosen based on articles such as [this one](https://www.allsides.com/media-bias/media-bias-chart) from AllSides, which describe the media-biases of news sources. The following graphic from their site, shows how they categorize news sources.
+
+![AllSides Media Bias Chart](images/AllSidesMediaBiasChart.jpg)
+
+Here's a list of how I chose sources:
+
 | Left Sources | Right Sources |
 | -------------|---------------|
 | MSNBC | Breitbart |
