@@ -47,28 +47,20 @@ It was able to achieve fairly good accuracy after about 5 epochs as you can see 
 ![Graph of Model Training Accuracy](images/download.png)
 
 ### Article Sources
-##### Left Sources
-  * MSNBC
-  * Vox
-  * Jacobin
-  * Huffington Post
-  * Buzzfeed
-  * New Yorker
-  * Mother Jones
-  * Washington Post
-  * Democracy Now
-  * Salon
-##### Right Sources:
-  * Breitbart
-  * Fox
-  * The Blaze
-  * Hannity.com
-  * Drudge Report
-  * National Review
-  * Red State
-  * Federalist
-  * Twitchy
-  * Weekly Standard
+
+| Left Sources | Right Sources |
+| -------------|---------------|
+| MSNBC | Breitbart |
+| Vox | Fox |
+| Jacobin | The Blaze |
+| Huffington Post | Hannity.com |
+| Buzzfeed | Drudge Report |
+| New Yorker | National Review |
+| Mother Jones | Red State |
+| Washington Post | Federalist |
+| Democracy Now | Twitchy |
+| Salon | Weekly Standard |
+
 
 ### Next Steps
 
