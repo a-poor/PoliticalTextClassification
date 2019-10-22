@@ -52,7 +52,9 @@ Chosen based on articles such as [this one](https://www.allsides.com/media-bias/
 
 ![AllSides Media Bias Chart](images/AllSidesMediaBiasChart.jpg)
 
-Here's a list of how I chose sources:
+_source: [https://www.allsides.com/media-bias/media-bias-chart](https://www.allsides.com/media-bias/media-bias-chart)_
+
+Here's a list of the sources I used (in no particular order):
 
 | Left Sources | Right Sources |
 | -------------|---------------|
