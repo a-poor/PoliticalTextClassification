@@ -2,7 +2,7 @@
 
 ### Summary
 
-I created this model at Sarah Lawrence College as part of my conference work for the class [Bio-Inspired Artificial Intelligence](http://science.slc.edu/jmarshall/bioai/) taught by Prof. Jim Marshall.
+I created this model in 2019 at Sarah Lawrence College as part of my conference work for the class [Bio-Inspired Artificial Intelligence](http://science.slc.edu/jmarshall/bioai/) taught by Prof. Jim Marshall.
 
 This was an attempt to create a model that would be able to classify news articles as being either right-leaning or left-leaning based on their content.
 
